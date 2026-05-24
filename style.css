@@ -1,30 +1,103 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+:root {
+  --background: #020502;
+  --green: #3cff72;
+  --green-dim: #16b84f;
+  --green-soft: rgba(60, 255, 114, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
 
 body {
-  background-color: black;
-  color: green;
-  font-family: monospace;
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background:
+    linear-gradient(rgba(60, 255, 114, 0.04) 50%, transparent 50%) 0 0 / 100% 4px,
+    radial-gradient(circle at center, rgba(60, 255, 114, 0.1), transparent 58%),
+    var(--background);
+  color: var(--green);
+  font-family: "Share Tech Mono", "IBM Plex Mono", "Fira Code", "Courier New", monospace;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(60, 255, 114, 0.64);
   word-wrap: break-word;
 }
 
-/* unvisited link */
-a:link {
-  color: green;
+.terminal {
+  width: min(100%, 860px);
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid var(--green-dim);
+  background: rgba(0, 12, 3, 0.74);
+  box-shadow:
+    0 0 26px var(--green-soft),
+    inset 0 0 32px rgba(60, 255, 114, 0.08);
 }
 
-/* visited link */
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--green-dim);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.75rem, 14vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+p {
+  max-width: 720px;
+  margin: 1.2rem auto 0;
+  font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+}
+
+.password {
+  margin-top: 2rem;
+  color: #b6ffc8;
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+}
+
+.password span {
+  white-space: nowrap;
+}
+
+.divider {
+  margin: 2.1rem 0 0.9rem;
+  color: #b6ffc8;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+}
+
+a,
 a:visited {
-  color: green;
+  color: #b6ffc8;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
-/* mouse over link */
-a:hover {
-  color: green;
-}
-
-/* selected link */
+a:hover,
 a:active {
-  color: green;
+  color: #ffffff;
+}
+
+@media (max-width: 460px) {
+  body {
+    padding: 1rem;
+  }
+
+  .terminal {
+    padding: 1.25rem;
+  }
 }
