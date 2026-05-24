@@ -1,0 +1,12 @@
+?d 1-12, ?l 1-9, ?u 1-9, ?l 1-9 + ?d 1-3
+http://hashes.org wordlist + 23000 rules
+personal compilations + 23000 rules
+keywalking qwerty top left
+same chars 6 1-6 + same chars 1-6
+(this is|it is|it's|that is|that's) a ["bad" synonyms] password + space rules + leet rules
+all old leaked passwords + 23000 rules
+all old leaked passwords + ?a 1-5
+I hope that's all
+*302000 rules not 23000
+all possible qwerty pwd from 1 to 12 I guess
+also tried md5(passwords)
